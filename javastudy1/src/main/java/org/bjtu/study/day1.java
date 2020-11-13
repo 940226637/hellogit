@@ -6,6 +6,7 @@ import java.math.*;
 /**
  * @author fq
  * @date 2020.11.13
+ * @version 1.0
  */
 
 class Student{
