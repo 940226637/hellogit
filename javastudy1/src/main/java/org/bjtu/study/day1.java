@@ -40,23 +40,8 @@ public class day1 {
         }
     }
 
-    public static void printStuArray(Student[] stu){
-        for(Student s : stu){
-            System.out.format("%s %s %s",s.number,s.state,s.score);
-            System.out.println();
-        }
-    }
-
-    public static void main(String[] args) {
-        Student[] stu = new Student[20];
+    public static void sortArray(Student[] stu){
         int size = stu.length;
-        for(int i = 1;i <= 20;++i){
-            Student s = new Student(i,(int)((Math.random()*3)+1),(int)((Math.random()*100)+1));
-            stu[i-1] = s;
-        }
-
-        searchStuArray(stu);
-
         //bubblesort
         for(int i = 0;i < size - 1;++i){
             for(int j = 0;j < size - i - 1;++j){
@@ -67,6 +52,26 @@ public class day1 {
                 }
             }
         }
+    }
+
+    public static void printStuArray(Student[] stu){
+        for(Student s : stu){
+            System.out.format("%s %s %s",s.number,s.state,s.score);
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Student[] stu = new Student[20];
+
+        for(int i = 1;i <= 20;++i){
+            Student s = new Student(i,(int)((Math.random()*3)+1),(int)((Math.random()*100)+1));
+            stu[i-1] = s;
+        }
+
+        searchStuArray(stu);
+
+        sortArray(stu);
 
         System.out.println("------------------------");
 
